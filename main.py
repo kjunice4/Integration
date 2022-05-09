@@ -25,7 +25,7 @@ Builder.load_string("""
                 root.manager.transition.direction = "left" 
                 
         Button:
-            font_size: 50
+            font_size: '20sp'
             background_color: 0, 0 , 0 , 1
             size_hint_y: None
             height: 200
@@ -35,11 +35,21 @@ Builder.load_string("""
                 root.manager.transition.direction = "left"         
                 
         Button:
-            font_size: 50
+            font_size: '20sp'
             background_color: 0, 0 , 0 , 1
             size_hint_y: None
-            height: 200
-            text: "KSquared-Mathematics : Integration Calculator"
+            height: 100
+            text: "KSquared-Mathematics :"
+            on_release:
+                app.root.current = "Menu"
+                root.manager.transition.direction = "left" 
+
+        Button:
+            font_size: '20sp'
+            background_color: 0, 0 , 0 , 1
+            size_hint_y: None
+            height: 100
+            text: "Integration Calculator"
             on_release:
                 app.root.current = "Menu"
                 root.manager.transition.direction = "left"                 
@@ -66,14 +76,14 @@ Builder.load_string("""
             height: self.minimum_height
             
             Label:
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
                 text: "Menu"
                     
             Button:
-                font_size: 75
+                font_size: '20sp'
                 background_color: 0, 1, 1, 1
                 size_hint_y: None
                 height: 200
@@ -84,7 +94,7 @@ Builder.load_string("""
                     root.manager.transition.direction = "left"
                     
             Button:
-                font_size: 75
+                font_size: '20sp'
                 background_color: 1, 0, 1, 1
                 size_hint_y: None
                 height: 200
@@ -95,7 +105,7 @@ Builder.load_string("""
                     root.manager.transition.direction = "left"
                     
             Button:
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
@@ -105,7 +115,7 @@ Builder.load_string("""
                     webbrowser.open('https://www.ksquaredmathematics.com/subscribe') 
                     
             Label:
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
@@ -114,8 +124,8 @@ Builder.load_string("""
             Image:
                 source: 'KSquared_QR.png'
                 size_hint_y: None
-                height: 1000
-                width: 1000
+                height: 800
+                width: 800
                 
 """)
 
@@ -139,16 +149,16 @@ Builder.load_string("""
             height: self.minimum_height
             
             Label:
-                font_size: 50
+                font_size: '15sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
-                text: "What's new at KSquared-KSquared-Mathematics?"
+                text: "What's new at KSquared-Mathematics?"
             
             Button:
                 id: steps
                 text: "Menu"   
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 background_color: 0, 0 , 1 , 1
                 height: 200
@@ -158,14 +168,14 @@ Builder.load_string("""
                     root.manager.transition.direction = "right" 
                     
             Label:
-                font_size: 40
+                font_size: '15sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
                 text: "Integration Calculator v0.1"
                 
             Label:
-                font_size: 40
+                font_size: '15sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
@@ -193,7 +203,7 @@ Builder.load_string("""
             height: self.minimum_height
             
             Label:
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 200
                 padding: 10, 10
@@ -211,7 +221,7 @@ Builder.load_string("""
                 Button:
                     id: steps
                     text: "Menu"   
-                    font_size: 75
+                    font_size: '20sp'
                     size_hint_y: None
                     background_color: 0, 0 , 1 , 1
                     height: 200
@@ -223,7 +233,7 @@ Builder.load_string("""
                 Button:
                     id: steps
                     text: "Clear All"   
-                    font_size: 75
+                    font_size: '20sp'
                     size_hint_y: None
                     background_color: 1, 0 , 0 , 1
                     height: 200
@@ -240,7 +250,7 @@ Builder.load_string("""
                 text: entry.text
                 hint_text: "f(x)="
                 multiline: False
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 125
                 padding: 10              
@@ -250,7 +260,7 @@ Builder.load_string("""
                 text: prime.text
                 hint_text: "# of times to integrate"
                 multiline: False
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 125
                 padding: 10              
@@ -261,7 +271,7 @@ Builder.load_string("""
                 text: respect.text
                 hint_text: "With respect to: x, y or z"
                 multiline: False
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 125
                 padding: 10  
@@ -272,7 +282,7 @@ Builder.load_string("""
                 text: value.text
                 hint_text: "Definite Integral: a,b"
                 multiline: False
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 height: 125
                 padding: 10  
@@ -281,7 +291,7 @@ Builder.load_string("""
             Button:
                 id: steps
                 text: "Integrate"   
-                font_size: 75
+                font_size: '20sp'
                 size_hint_y: None
                 background_color: 0, 1, 0 , 1
                 height: 200
@@ -346,8 +356,8 @@ class Integration(Screen):
             z = Symbol("z")
             
             if int(prime) > 0 and str(respect) != "":
-                self.ids.list_of_steps.add_widget(Label(text= "f(" + respect + ") = " + str(func).replace("**","^").replace("*x","x").replace("*y","y").replace("*z","z").replace("-"," - ").replace("+"," + ").replace("***","**") ,font_size = 50, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text= "Integrate " + str(prime) + " time(s) with respect to " + str(respect),font_size = 50, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= "f(" + respect + ") = " + str(func).replace("**","^").replace("*x","x").replace("*y","y").replace("*z","z").replace("-"," - ").replace("+"," + ").replace("***","**") ,font_size = '15sp', size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= "Integrate " + str(prime) + " time(s) with respect to " + str(respect),font_size = '15sp', size_hint_y= None, height=100))
                 self.layouts.append(layout)
                 
                 print("_________________________________________")
@@ -529,15 +539,15 @@ class Integration(Screen):
                         func_integrated_list_empty_five_out = str(func_integrated_list_empty[5:]).replace("[","").replace("]","").replace(",","").replace("'","")
                         print("func_integrated_list_empty_five_out",func_integrated_list_empty_five_out)
                     
-                        self.ids.list_of_steps.add_widget(Label(text= "_________________________________________________________________",font_size = 50, size_hint_y= None, height=100))
-                        self.ids.list_of_steps.add_widget(Label(text= "∫" * (k+1) + "f" + "(" + respect + ") = " + func_integrated_list_empty_to_five,font_size = 50, size_hint_y= None, height=100))
-                        self.ids.list_of_steps.add_widget(Label(text= func_integrated_list_empty_five_out,font_size = 50, size_hint_y= None, height=100))
+                        self.ids.list_of_steps.add_widget(Label(text= "_________________________________________________________________",font_size = '15sp', size_hint_y= None, height=100))
+                        self.ids.list_of_steps.add_widget(Label(text= "∫" * (k+1) + "f" + "(" + respect + ") = " + func_integrated_list_empty_to_five,font_size = '15sp', size_hint_y= None, height=100))
+                        self.ids.list_of_steps.add_widget(Label(text= func_integrated_list_empty_five_out,font_size = '15sp', size_hint_y= None, height=100))
                         self.layouts.append(layout)
                         
                     else:
                         func_integrated_list_empty = str(func_integrated_list_empty[:]).replace("[","").replace("]","").replace(",","").replace("'","")
-                        self.ids.list_of_steps.add_widget(Label(text= "_________________________________________________________________",font_size = 50, size_hint_y= None, height=100))
-                        self.ids.list_of_steps.add_widget(Label(text= "∫" * (k+1) + "f" + "(" + respect + ") = " + func_integrated_list_empty,font_size = 50, size_hint_y= None, height=100))
+                        self.ids.list_of_steps.add_widget(Label(text= "_________________________________________________________________",font_size = '15sp', size_hint_y= None, height=100))
+                        self.ids.list_of_steps.add_widget(Label(text= "∫" * (k+1) + "f" + "(" + respect + ") = " + func_integrated_list_empty,font_size = '15sp', size_hint_y= None, height=100))
 
                     
                     func = func_integrated.replace("**","^").replace("*","")
@@ -559,8 +569,8 @@ class Integration(Screen):
                 func_a_evaled = eval(str(func_a))
                 print("func_a_evaled = ",func_a_evaled)
                 
-                self.ids.list_of_steps.add_widget(Label(text= "-----------------------------------------------------------------------------------------------" ,font_size = 50, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text= "∫f" + "(" + a + ") = " + "{:,.2f}".format(float(str(func_a_evaled))),font_size = 50, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= "-----------------------------------------------------------------------------------------------" ,font_size = '15sp', size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= "∫f" + "(" + a + ") = " + "{:,.2f}".format(float(str(func_a_evaled))),font_size = '15sp', size_hint_y= None, height=100))
                 self.layouts.append(layout)
                 
                 func_b = str(func_integrated).replace(respect,b).replace("sqrt","*math.sqrt").replace("pi","*math.pi").replace("^","**").replace("sin","*math.sin").replace("cos","*math.cos").replace("tan","*math.tan").replace("csc","*math.csc").replace("sec","*math.sec").replace("cot","*math.cot").replace("log","*math.log").replace("e","*math.e").replace("smath.ec","*math.sec").replace("math.smath.secc","*math.sec").replace("-*","-").replace(" *m"," m").replace("(*m","(m")
@@ -573,8 +583,8 @@ class Integration(Screen):
                 func_b_evaled = eval(str(func_b))
                 print("func_b_evaled = ",func_b_evaled)
 
-                self.ids.list_of_steps.add_widget(Label(text= "-----------------------------------------------------------------------------------------------" ,font_size = 50, size_hint_y= None, height=100))
-                self.ids.list_of_steps.add_widget(Label(text= "∫f" + "(" + b + ") = " + "{:,.2f}".format(float(str(func_b_evaled))),font_size = 50, size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= "-----------------------------------------------------------------------------------------------" ,font_size = '15sp', size_hint_y= None, height=100))
+                self.ids.list_of_steps.add_widget(Label(text= "∫f" + "(" + b + ") = " + "{:,.2f}".format(float(str(func_b_evaled))),font_size = '15sp', size_hint_y= None, height=100))
                 
                 a = str(eval(a.replace("sqrt","math.sqrt").replace("pi","math.pi").replace("ln","math.log").replace("log","math.log").replace("e","math.e").replace("^","**")))
                     
@@ -584,29 +594,29 @@ class Integration(Screen):
                 print("b = ",b)
                 
                 if float(a) < float(b):
-                    self.ids.list_of_steps.add_widget(Label(text= "-----------------------------------------------------------------------------------------------" ,font_size = 50, size_hint_y= None, height=100))
-                    self.ids.list_of_steps.add_widget(Label(text= "∫f" + "(" + b + ") - " + "∫f" + "(" + a + ") =",font_size = 50, size_hint_y= None, height=100))
-                    self.ids.list_of_steps.add_widget(Label(text= "{:,.2f}".format(float(str(func_b_evaled))) + " - " + "{:,.2f}".format(float(str(func_a_evaled))) + " =",font_size = 50, size_hint_y= None, height=100))
+                    self.ids.list_of_steps.add_widget(Label(text= "-----------------------------------------------------------------------------------------------" ,font_size = '15sp', size_hint_y= None, height=100))
+                    self.ids.list_of_steps.add_widget(Label(text= "∫f" + "(" + b + ") - " + "∫f" + "(" + a + ") =",font_size = '15sp', size_hint_y= None, height=100))
+                    self.ids.list_of_steps.add_widget(Label(text= "{:,.2f}".format(float(str(func_b_evaled))) + " - " + "{:,.2f}".format(float(str(func_a_evaled))) + " =",font_size = '15sp', size_hint_y= None, height=100))
                     
                     integral_evaled = str(float(func_b_evaled) - float(func_a_evaled))
                     print("integral_evaled",integral_evaled)
  
-                    self.ids.list_of_steps.add_widget(Label(text= "{:,.2f}".format(float(integral_evaled)),font_size = 50, size_hint_y= None, height=100))
+                    self.ids.list_of_steps.add_widget(Label(text= "{:,.2f}".format(float(integral_evaled)),font_size = '15sp', size_hint_y= None, height=100))
                  
                 else:
-                    self.ids.list_of_steps.add_widget(Label(text= "-----------------------------------------------------------------------------------------------" ,font_size = 50, size_hint_y= None, height=100))
-                    self.ids.list_of_steps.add_widget(Label(text= "b must be greater than a!" ,font_size = 50, size_hint_y= None, height=100))
+                    self.ids.list_of_steps.add_widget(Label(text= "-----------------------------------------------------------------------------------------------" ,font_size = '15sp', size_hint_y= None, height=100))
+                    self.ids.list_of_steps.add_widget(Label(text= "b must be greater than a!" ,font_size = '15sp', size_hint_y= None, height=100))
                     self.layouts.append(layout)
             else:
                 if int(prime) == 0:
-                    self.ids.list_of_steps.add_widget(Label(text= "Prime must be greater than 0!" ,font_size = 50, size_hint_y= None, height=100))
+                    self.ids.list_of_steps.add_widget(Label(text= "Prime must be greater than 0!" ,font_size = '15sp', size_hint_y= None, height=100))
                     self.layouts.append(layout)
                 elif respect == "":
-                    self.ids.list_of_steps.add_widget(Label(text= "Respect must be entered" ,font_size = 50, size_hint_y= None, height=100))
+                    self.ids.list_of_steps.add_widget(Label(text= "Respect must be entered" ,font_size = '15sp', size_hint_y= None, height=100))
                     self.layouts.append(layout)
                     
         except Exception:
-            self.ids.list_of_steps.add_widget(Label(text= "Invalid Input" ,font_size = 50, size_hint_y= None, height=100))
+            self.ids.list_of_steps.add_widget(Label(text= "Invalid Input" ,font_size = '15sp', size_hint_y= None, height=100))
             self.layouts.append(layout)        
             
 class Homepage(Screen):
